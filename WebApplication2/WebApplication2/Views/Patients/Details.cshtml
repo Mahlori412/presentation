@@ -1,0 +1,106 @@
+﻿@model WebApplication2.Models.tblPatient
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblPatient</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Patient_Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Patient_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient_Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Patient_Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient_Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Patient_Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient_ID_NO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Patient_ID_NO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient_Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Patient_Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient_ContactNO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Patient_ContactNO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient_DOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Patient_DOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Patien_Surname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Patien_Surname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient_Image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Patient_Image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient_Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Patient_Email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Patient_Code }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

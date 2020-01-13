@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebApplication2.Models.tblInvoice>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Bill_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bill_Code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblAppointment.Appointment_Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblPatient.Patient_Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bill_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bill_Code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblAppointment.Appointment_Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblPatient.Patient_Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Bill_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Bill_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Bill_Id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,93 @@
+﻿@model IEnumerable<WebApplication2.Models.tblPatient>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Patient_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Patient_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Patient_Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Patient_Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Patient_ID_NO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Patient_Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Patient_ContactNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Patient_DOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Patien_Surname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Patient_Image)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Patient_Email)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patient_Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patient_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patient_Age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patient_Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patient_ID_NO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patient_Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patient_ContactNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patient_DOB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patien_Surname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patient_Image)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Patient_Email)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Patient_Code }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Patient_Code }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Patient_Code })
+        </td>
+    </tr>
+}
+
+</table>

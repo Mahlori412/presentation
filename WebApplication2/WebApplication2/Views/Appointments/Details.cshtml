@@ -1,0 +1,74 @@
+﻿@model WebApplication2.Models.tblAppointment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblAppointment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Appointment_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Appointment_Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Appointment_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Appointment_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Appointment_Time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Appointment_Time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Appointment_Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Appointment_Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Appointment_Room)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Appointment_Room)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblDoctor.Doctor_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblDoctor.Doctor_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblPatient.Patient_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblPatient.Patient_Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Appointment_Code }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,50 @@
+﻿@model WebApplication2.Models.tblInvoice
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblInvoice</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Bill_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bill_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bill_Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bill_Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblAppointment.Appointment_Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblAppointment.Appointment_Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblPatient.Patient_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblPatient.Patient_Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Bill_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
